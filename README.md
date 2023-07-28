@@ -10,7 +10,7 @@ Bundles [Nerd Fonts icons](https://www.nerdfonts.com/cheat-sheet) for [egui](htt
 
 Add the crate as a dependency in Cargo.toml:
 ```toml
-egui_nerdfonts = "0.1.0"
+egui_nerdfonts = "0.1.1"
 ```
 
 or type `cargo add egui_nerdfonts`, in your project.
