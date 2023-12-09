@@ -1,10 +1,7 @@
 fn main() {
     eframe::run_native(
         "egui_nerdfonts demo",
-        eframe::NativeOptions {
-            initial_window_size: Some(egui::vec2(320.0, 755.0)),
-            ..Default::default()
-        },
+        eframe::NativeOptions::default(),
         Box::new(|cc| Box::new(Demo::new(cc))),
     )
     .unwrap();
@@ -33,7 +30,7 @@ impl eframe::App for Demo {
                         "egui_nerdfonts::regular::LANGUAGE_RUST: {}",
                         egui_nerdfonts::regular::LANGUAGE_RUST
                     ))
-                        .size(42.),
+                    .size(42.),
                 );
             });
         });
