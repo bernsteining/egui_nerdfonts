@@ -66,3 +66,5 @@ with TTFont(
         code = r"\u" + "{" + f"{char[0]:X}" + "}"
         print(f"pub const {symbol_name}: &str = \"{code}\";")
 ```
+
+See the full script [here](fonts/script.py).
