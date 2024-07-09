@@ -10,7 +10,7 @@ Bundles [Nerd Fonts icons](https://www.nerdfonts.com/cheat-sheet) for [egui](htt
 
 Add the crate as a dependency in Cargo.toml:
 ```toml
-egui_nerdfonts = "0.1.3"
+egui_nerdfonts = "0.1.4"
 ```
 
 or type `cargo add egui_nerdfonts`, in your project.
@@ -32,7 +32,7 @@ Choose nerdfonts icons you want to use among [these](https://www.nerdfonts.com/c
 Then use nerdfonts icons as follow:
 
 ```rust
-ui.label(format!("{}", egui_nerdfonts::regular::NF_DEV_RUST));
+ui.label(format!("{}", egui_nerdfonts::regular::LANGUAGE_RUST));
 ```
 
 ## Example
@@ -47,7 +47,7 @@ cargo run --example rust_logo
 
 Got inspired by [egui_phosphor](https://github.com/amPerl/egui-phosphor), code uses the same structure.
 
-The .ttf used is [this one](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/NerdFontsSymbolsOnly.zip), and the `src/variants/regular.rs` was generated with the following python script, with the `nerdfonts_regular.ttf` as first argument:
+The .ttf used is [this one](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/NerdFontsSymbolsOnly.zip) (v3.2.1), and the `src/variants/regular.rs` was generated with the following python script, with the `nerdfonts_regular.ttf` as first argument:
 
 ```python
 from itertools import chain
@@ -66,3 +66,5 @@ with TTFont(
         code = r"\u" + "{" + f"{char[0]:X}" + "}"
         print(f"pub const {symbol_name}: &str = \"{code}\";")
 ```
+
+See the full script [here](fonts/script.py).
