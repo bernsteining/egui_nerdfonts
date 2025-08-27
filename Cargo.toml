@@ -10,10 +10,10 @@ keywords = ["egui", "nerdfonts", "icons", "symbols", "font"]
 categories = ["gui"]
 
 [dependencies]
-egui = { version = "0.32", default-features = false }
+egui = { version = "0.32.1", default-features = false }
 
 [dev-dependencies]
-eframe = "0.32"
+eframe = "0.32.1"
 
 [[example]]
 name = "rust_logo"
