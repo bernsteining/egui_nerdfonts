@@ -1,3 +1,5 @@
+use std::sync::Arc;
+
 pub mod regular;
 
 #[derive(Debug, Clone, Copy)]
@@ -6,10 +8,10 @@ pub enum Variant {
 }
 
 impl Variant {
-    pub fn font_data(&self) -> egui::FontData {
+    pub fn font_data(&self) -> Arc<egui::FontData> {
         let mut font_data =
             egui::FontData::from_static(include_bytes!("../../fonts/nerdfonts_regular.ttf"));
         font_data.tweak.y_offset_factor = 0.0;
-        font_data
+        Arc::new(font_data)
     }
 }
